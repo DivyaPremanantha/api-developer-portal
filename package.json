@@ -8,7 +8,7 @@
     "devportal-multi-tenant": "sh startup.sh",
     "compress": "sh compress.sh",
     "build-css": "node watcher.js",
-    "preinstall": "npm cache clean --force && npx npm-force-resolutions"
+    "preinstall": "([ ! -f package-lock.json ] && npm install --package-lock-only --ignore-scripts --no-audit); npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,9 @@
   },
   "homepage": "https://github.com/DivyaPremanantha/devportal-developer-webapp#readme",
   "dependencies": {
-    "devportal-webapp": "^1.0.59",
-    "npm-force-resolutions": "^0.0.10"
+    "devportal-webapp": "^1.0.59"
   },
-  "resolutions": {
-    "jsonpath-plus": "10.0.0"
+  "overrides": {
+    "jsonpath-plus": "^10.0.0"
   }
 }
