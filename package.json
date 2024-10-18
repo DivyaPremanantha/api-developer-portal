@@ -9,7 +9,8 @@
     "devportal-multi-tenant": "sh startup.sh",
     "compress": "sh compress.sh",
     "build-css": "node watcher.js",
-    "test": "node src/app.js"
+    "test": "node src/app.js",
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/DivyaPremanantha/devportal-developer-webapp#readme",
   "dependencies": {
-    "devportal-webapp": "^1.0.59"
+    "devportal-webapp": "^1.0.59",
+    "express": "^4.17.1"
   }
 }
