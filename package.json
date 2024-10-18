@@ -10,7 +10,8 @@
     "compress": "sh compress.sh",
     "build-css": "node watcher.js",
     "test": "node src/app.js",
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,8 @@
   },
   "resolutions": {
     "jsonpath-plus": "10.0.0"
+  },
+  "devDependencies": {
+    "npm-force-resolutions": "^0.0.10"
   }
 }
