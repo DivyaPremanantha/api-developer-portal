@@ -8,7 +8,7 @@
     "devportal-multi-tenant": "sh startup.sh",
     "compress": "sh compress.sh",
     "build-css": "node watcher.js",
-    "preinstall": "npx npm-force-resolutions"
+    "preinstall": "npm cache clean --force && npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
