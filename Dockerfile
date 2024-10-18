@@ -1,5 +1,5 @@
 FROM timbru31/java-node
-USER root
+USER 10014
 WORKDIR /public
 COPY package.json ./
 RUN npm install
