@@ -1,8 +1,8 @@
 FROM node
-USER 10014
-WORKDIR /public
+RUN addgroup app && adduser -S -G app app
+USER app
+WORKDIR /app
 COPY package.json ./
-RUN chown -R 10014:0 /.npm
 RUN npm install
 COPY . .
 CMD npm run devportal-up
