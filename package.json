@@ -1,6 +1,7 @@
 {
   "name": "devportal-developer-webapp",
   "version": "1.0.0",
+  "main": "src/app.js",
   "description": "Devportal developer webapp",
   "scripts": {
     "devportal-design": "npm run build-css --watch & node node_modules/devportal-webapp/src/dev-server.js",
