@@ -5,11 +5,11 @@ adminURL = 'http://localhost:8080/admin/orgFiles?orgName='
 allowedOrigins = ["http://localhost:3000"]
 
 [devportal.store]
-host = "localhost"
-port = 5432
-user = "postgres"
-password = "postgres"
-database = "devportal"
+host = "pg-82d26742-afe1-4ed2-bf5e-0034635f0a07-ecidevpo688499110-chore.k.aivencloud.com"
+port = 23658
+user = "avnadmin"
+password = ""
+database = "defaultdb"
 
 [devportal.models]
 awsAccessKeyId = ""

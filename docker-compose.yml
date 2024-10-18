@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: devportal-postgres
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U $${POSTGRES_USER}"]
+      timeout: 20s
+      retries: 10
+    environment:
+      POSTGRES_DB: devportal
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_ROOT_PASSWORD: root
+    ports:
+      - "5432:5432" 
+    expose:
+      - "5432"
+    networks:
+      - devportal-network
+    volumes:
+      - ./artifacts/data-dump.sql:/docker-entrypoint-initdb.d/script.sql
+      - db-data:/var/lib/postgresql/data
+
+  devportal-webapp:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+networks:
+  devportal-network:
+    driver: bridge
+    name: devportal-network
+
+volumes:
+  db-data:
