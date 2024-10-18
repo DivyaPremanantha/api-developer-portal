@@ -28,5 +28,8 @@
   "dependencies": {
     "devportal-webapp": "^1.0.59",
     "express": "^4.17.1"
+  },
+  "resolutions": {
+    "jsonpath-plus": "10.0.0"
   }
 }
