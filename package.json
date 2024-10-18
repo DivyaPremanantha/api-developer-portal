@@ -5,10 +5,11 @@
   "scripts": {
     "devportal-design": "npm run build-css --watch & node node_modules/devportal-webapp/src/dev-server.js",
     "devportal": "sh startup.sh single",
+    "devportal-up": "npm run build-css --watch & node node_modules/devportal-webapp/src/single-tenant.js",
     "devportal-multi-tenant": "sh startup.sh",
     "compress": "sh compress.sh",
     "build-css": "node watcher.js",
-    "preinstall": "npx force-resolutions"
+    "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
