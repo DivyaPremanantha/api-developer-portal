@@ -27,7 +27,7 @@
     "devportal-webapp": "^1.0.59",
     "npm-force-resolutions": "^0.0.10"
   },
-  "overrides": {
+  "resolutions": {
     "jsonpath-plus": "10.0.0"
   }
 }
