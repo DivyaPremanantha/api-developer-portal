@@ -2,11 +2,11 @@
 tenant=$1
  
 # Read values from config.toml
-user=$(sed -n 's/^user = "\([^"]*\)"/\1/p' artifacts/config.toml)
-password=$(sed -n 's/^password = "\([^"]*\)"/\1/p' artifacts/config.toml)
-database=$(sed -n 's/^database = "\([^"]*\)"/\1/p' artifacts/config.toml)
-host=$(sed -n 's/^host = "\([^"]*\)"/\1/p' artifacts/config.toml)
-port=$(sed -n 's/^port = "\([^"]*\)"/\1/p' artifacts/config.toml)
+# user=$(sed -n 's/^user = "\([^"]*\)"/\1/p' artifacts/Config.toml)
+# password=$(sed -n 's/^password = "\([^"]*\)"/\1/p' artifacts/Config.toml)
+# database=$(sed -n 's/^database = "\([^"]*\)"/\1/p' artifacts/Config.toml)
+# host=$(sed -n 's/^host = "\([^"]*\)"/\1/p' artifacts/Config.toml)
+# port=$(sed -n 's/^port = "\([^"]*\)"/\1/p' artifacts/Config.toml)
 
 # Export password to avoid psql prompt
 export PGPASSWORD=$password
@@ -48,7 +48,7 @@ java_pid=$!  # Capture the process ID of the Java process
 # Start the Node.js application
 echo "Starting Devportal application..."
 if [ "$tenant" == "single" ] || [ "$tenant" == "dev" ]; then
-    npm run build-css --watch & node ../node_modules/devportal-webapp/src/single-tenant.js
+    npm run build-css --watch & node ../node_modules/devportal-webapp/src/multi-tenant.js
 else
     node ../node_modules/devportal-webapp/src/multi-tenant.js
 fi
