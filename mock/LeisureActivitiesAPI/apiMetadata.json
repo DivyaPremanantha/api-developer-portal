@@ -1,163 +1,39 @@
 {
-  "openapi": "3.1.0",
-  "info": {
-    "title": "Accommodation API",
-    "description": "The Accommodation API allows users to manage hotel room reservations, including creating, updating, and retrieving reservation details.",
-    "version": "1.0.0"
-  },
-  "paths": {
-    "/reservations/{id}": {
-      "put": {
-        "summary": "Update a reservation",
-        "description": "Update the details of an existing reservation by providing its unique ID and updated information.",
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "id",
-            "schema": {
-              "type": "string"
-            },
-            "required": true,
-            "description": "The unique ID of the reservation",
-            "example": "res123"
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewReservation"
-              },
-              "examples": {
-                "example-1": {
-                  "summary": "Update reservation",
-                  "value": {
-                    "hotel_id": "hotel123",
-                    "guest_name": "John Doe",
-                    "check_in_date": "2024-07-02",
-                    "check_out_date": "2024-07-05",
-                    "number_of_guests": 2
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Reservation updated",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Reservation"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid request"
-          },
-          "404": {
-            "description": "Reservation not found"
-          },
-          "500": {
-            "description": "Server error"
-          }
-        }
-      }
-    }
-  },
-  "components": {
-    "securitySchemes": {
-      "BearerAuth": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT",
-        "description": "Use a Bearer token for authentication (JWT)"
-      }
+  "apiInfo": {
+    "apiName": "LeisureActivitiesAPI",
+    "orgName": "ACME",
+    "apiCategory": "Transportation",
+    "tags": [
+      "leisure",
+      "activities",
+      "reservations"
+    ],
+    "apiDescription": "API for retrieving information about leisure activities and managing reservations",
+    "apiVersion": "2.1.0",
+    "apiType": "REST",
+    "additionalProperties": {
+      "documentationUrl": "https://globaldata.com/docs/countries-api"
     },
-    "schemas": {
-      "NewReservation": {
-        "type": "object",
-        "properties": {
-          "hotel_id": {
-            "type": "string",
-            "description": "The ID of the hotel where the reservation is made",
-            "example": "hotel123"
-          },
-          "guest_name": {
-            "type": "string",
-            "description": "The name of the guest making the reservation",
-            "example": "John Doe"
-          },
-          "check_in_date": {
-            "type": "string",
-            "format": "date",
-            "description": "The check-in date for the reservation",
-            "example": "2024-07-01"
-          },
-          "check_out_date": {
-            "type": "string",
-            "format": "date",
-            "description": "The check-out date for the reservation",
-            "example": "2024-07-05"
-          },
-          "number_of_guests": {
-            "type": "integer",
-            "description": "The number of guests for the reservation",
-            "example": 2
-          }
-        }
-      },
-      "Reservation": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The unique identifier for the reservation",
-            "example": "res123"
-          },
-          "hotel_id": {
-            "type": "string",
-            "description": "The ID of the hotel where the reservation is made",
-            "example": "hotel123"
-          },
-          "guest_name": {
-            "type": "string",
-            "description": "The name of the guest who made the reservation",
-            "example": "John Doe"
-          },
-          "check_in_date": {
-            "type": "string",
-            "format": "date",
-            "description": "The check-in date for the reservation",
-            "example": "2024-07-01"
-          },
-          "check_out_date": {
-            "type": "string",
-            "format": "date",
-            "description": "The check-out date for the reservation",
-            "example": "2024-07-05"
-          },
-          "number_of_guests": {
-            "type": "integer",
-            "description": "The number of guests for the reservation",
-            "example": 2
-          },
-          "status": {
-            "type": "string",
-            "enum": ["confirmed", "cancelled", "pending"],
-            "description": "The status of the reservation",
-            "example": "confirmed"
-          }
-        }
-      }
+    "apiImageMetadata": {
+      "api-icon": "https://devportal-content.s3.amazonaws.com/ACBOrganization/resources/images/leisure.jpeg"
     }
+  },
+  "subscriptionPolicies": [
+    {
+      "policyName": "Gold"
+    },
+    {
+      "policyName": "Silver"
+    },
+    {
+      "policyName": "Bronze"
+    },
+    {
+      "policyName": "Unlimited"
+    }
+  ],
+  "serverUrl": {
+    "sandboxUrl": "https://leisure.api.sandbox.abc.com",
+    "productionUrl": "https://leisure.api.abc.com"
   }
 }
