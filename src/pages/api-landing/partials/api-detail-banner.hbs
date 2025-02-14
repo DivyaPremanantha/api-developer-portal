@@ -29,7 +29,15 @@
             download
           >Download</a>
         {{/in}}
+        {{#if (eq subscriptionPlans.length 1)}}
+          {{#each subscriptionPlans}}
+          {{#if @first}}
+            <a type="button" class="common-btn-white" href="{{../baseUrl}}/myapis?policyName={{this.policyName}}&apiName={{../apiMetadata.apiInfo.apiName}}&apiVersion={{../apiMetadata.apiInfo.apiVersion}}">Subscribe</a>
+          {{/if}}
+          {{/each}}
+        {{else}}
           <a type="button" class="common-btn-white" href="#subscriptionPlans">Subscribe</a>
+        {{/if}}
       </div>
     </div>
     <div class="col-12 col-md-5 text-md-right">

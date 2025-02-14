@@ -7,7 +7,7 @@
         <div class="row card-section">
             {{#each subscriptionPlans}}
             <div class="col-lg-3">
-                <div class="card dev-card custom-plans-card">
+                <div class="card dev-card {{#if (isMiddle @index ../subscriptionPlans.length)}} highlight-card{{else}}custom-plans-card{{/if}}">
                     <div class="card-body">
                         <h5 >{{displayName}}</h5>
                         <p> Billing plan: {{billingPlan}} </p>
