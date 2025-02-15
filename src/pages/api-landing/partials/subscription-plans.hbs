@@ -1,7 +1,7 @@
 <section id="subscriptionPlans" class="api-plans-section">
     <div class="col-11 row align-items-center api-plans-content">
         {{#if subscriptionPlans.length}}
-        <div class="common-header">
+        <div class="common-header text-start">
             <h2>Available Subscription Plans</h2>
         </div>
         <div class="row card-section">
@@ -13,7 +13,7 @@
                         <p> Billing plan: {{billingPlan}} </p>
                         <p class="custom-plans-description"> {{description}}</p>
                         {{#if (eq ../providerUrl "#subscriptionPlans")}}
-                            <a type="button" class="common-btn-outlined"
+                            <a type="button" class="{{#if (isMiddle @index ../subscriptionPlans.length)}} common-btn-primary{{else}}common-btn-outlined{{/if}}" 
                                 href="{{../baseUrl}}/myapis?policyName={{policyName}}&apiName={{../apiMetadata.apiInfo.apiName}}&apiVersion={{../apiMetadata.apiInfo.apiVersion}}">Subscribe</a>
                         {{else}}
                             <a type="button" class="common-btn-outlined" href="{{../providerUrl}}" target="_blank">Subscribe</a>
