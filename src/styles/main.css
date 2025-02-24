@@ -69,6 +69,10 @@ body {
   flex: 1;
 }
 
+.content-area {
+  margin: 3rem 0rem 3rem 3.75rem
+}
+
 .common-btn-primary {
   background-color: var(--primary-dark-color);
   color: var(--white-text-color);
