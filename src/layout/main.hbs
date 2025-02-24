@@ -16,7 +16,12 @@
 
 <body>
     {{> header }}
-    {{{ body }}}
+    <main class="main-container"></main>
+       {{> sidebar }}
+        <div class="content-area">
+        {{{ body }}}
+        </div>
+    </main>
     {{> footer }}
 </body>
 

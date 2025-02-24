@@ -24,7 +24,6 @@
 
 .active {
   font-weight: bold;
-  color: var(--primary-main-color) !important;
 }
 
 .profile-link {
