@@ -19,7 +19,7 @@
 @import "/styles/subscription.css";
 @import "/styles/advantages.css";
 @import "/styles/doc.css";
-
+@import "/styles/side-bar.css";
 :root {
   --main-bg-color: #ffffff;
   /* primary colors */
@@ -60,6 +60,13 @@ body {
   padding-top: 3.75rem;
   overflow: auto;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
 }
 
 .common-btn-primary {
