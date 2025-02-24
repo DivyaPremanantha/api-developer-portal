@@ -77,8 +77,8 @@
 }
 
 /* Content Area Styles */
-.content {
-    padding: 2rem;
+.doc-content {
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
     flex: 1;
 }
 
