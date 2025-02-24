@@ -1,7 +1,7 @@
 {
   "apiInfo": {
     "apiName": "CountriesAPI",
-    "apiHandle": "countriesapiv2.5.0",
+    "apiHandle": "CountriesAPI",
     "orgName": "ACME",
     "apiCategory": "Geography",
     "tags": ["countries", "capitals", "population", "continents"],
