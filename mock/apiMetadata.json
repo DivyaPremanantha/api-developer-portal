@@ -1,5 +1,6 @@
 [
     {
+        "apiHandle": "accommodationapi-v1.1.0",
         "apiInfo": {
             "apiName": "AccommodationAPI",
             "apiCategory": "Travel",
@@ -25,6 +26,7 @@
         }
     },
     {
+        "apiHandle": "countriesapi-v2.5.0",
         "apiInfo": {
             "apiName": "CountriesAPI",
             "orgName": "GlobalData",
