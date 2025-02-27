@@ -1,5 +1,6 @@
 [
     {
+        "apiHandle": "AccommodationAPI",
         "apiInfo": {
             "apiName": "AccommodationAPI",
             "apiHandle": "AccommodationAPI",
@@ -26,6 +27,7 @@
         }
     },
     {
+        "apiHandle": "CountriesAPI",
         "apiInfo": {
             "apiName": "CountriesAPI",
             "apiHandle": "CountriesAPI",

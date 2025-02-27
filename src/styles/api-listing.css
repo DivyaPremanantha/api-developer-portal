@@ -5,6 +5,7 @@ body {
 .apis-section {
   display: flex;
   justify-content: center;
+  margin: 3rem 3.75rem;
   align-items: center; 
   flex-direction: column;
 }
@@ -172,7 +173,7 @@ hr {
 }
 
 .api-card {
-  max-width: 22rem;
+  max-width: 30rem;
   text-align: left;
 }
 
@@ -239,8 +240,8 @@ hr {
   margin: 0.3rem 0;
 }
 
-.apibtn-container .common-btn-primary {
-  padding: 0.4rem 1.25rem;
+.apibtn-container {
+  padding: 0.4rem 0rem;
 }
 
 .dropdown {
@@ -308,4 +309,21 @@ hr {
     max-width: 100%;
     padding: 0.5rem 0.9375rem;
   }
+}
+
+.custom-dropdown {
+  display: none;
+}
+
+.subscription-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6; 
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
 }

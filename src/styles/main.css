@@ -16,10 +16,11 @@
 @import "/styles/pricing.css";
 @import "/styles/getStarted.css";
 @import "/styles/helpBanner.css";
-@import "/styles/subscription.css";
 @import "/styles/advantages.css";
 @import "/styles/doc.css";
 @import "/styles/side-bar.css";
+@import "/styles/subscription-modal.css";
+
 :root {
   --main-bg-color: #ffffff;
   /* primary colors */
@@ -65,7 +66,6 @@ body {
 }
 
 .main-container {
-  display: flex;
   flex: 1;
 }
 
@@ -239,7 +239,7 @@ body {
   background-color: var(--light-bg-color);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   margin: 10px 10px 10px 0;
 }
 
