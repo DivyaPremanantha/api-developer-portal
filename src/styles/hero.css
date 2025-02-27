@@ -1,3 +1,7 @@
+.hero-section {
+  margin: 3rem 3.75rem;
+}
+
 .hero-content {
   background-color: var(--primary-light-color);
   border-radius: 1.5rem;

@@ -1,6 +1,7 @@
 {
   "apiInfo": {
     "apiName": "LeisureActivitiesAPI",
+    "apiHandle": "LeisureActivitiesAPI",
     "orgName": "ACME",
     "apiCategory": "Transportation",
     "tags": [
