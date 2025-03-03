@@ -77,12 +77,12 @@
                     {{#if ../isAuthenticated}}
                       {{#if subscriptionPolicies.length}}
                         {{#if (eq subscriptionPolicies.length 1)}}
-                          <a type="button" class="common-btn-primary" onclick="subscribe('', '{{apiReferenceID}}', '')">Subscribe</a>
+                          <a type="button" class="common-btn-primary" onclick="subscribe('', '{{apiID}}', '{{apiReferenceID}}', '{{subscriptionPolicyDetails.policyID}}', '{{subscriptionPolicyDetails.policyName}}')">Subscribe</a>
                         {{else}}
-                          <a type="button" class="common-btn-primary" onclick="loadSubscriptionPlasnModal('{{apiReferenceID}}')">Subscribe</a>
+                          <a type="button" class="common-btn-primary" onclick="loadModal('planModal-{{apiID}}')">Subscribe</a>
                         {{/if}}   
                       {{#if applications.length}}
-                      <select class="form-select bg-white text-dark custom-dropdown" id="appDropdown-{{apiReferenceID}}">
+                      <select class="form-select bg-white text-dark custom-dropdown" id="appDropdown-{{apiID}}">
                         {{#each applications}}
                         <option value="{{id}}" {{#if subscribed}} disabled {{/if}}>{{name}} {{#if subscribed}} ✔ {{/if}} </option>
                         {{/each}}
