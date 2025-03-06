@@ -34,8 +34,50 @@
       "policyName": "Unlimited"
     }
   ],
-  "serverUrl": {
-    "sandboxUrl": "https://accommodation.api.sandbox.abc.com",
-    "productionUrl": "https://accommodation.api.abc.com"
-  }
+  "endPoints": {
+    "sandboxURL": "https://accommodation.api.sandbox.abc.com",
+    "productionURL": "https://accommodation.api.abc.com"
+  },
+  "docTypes": [
+    {
+      "type": "Specification"
+
+    },
+    {
+      "type": "HowTo",
+      "names": [
+        "Getting_Started.html",
+        "api-doc.md"
+      ]
+    },
+    {
+      "type": "Samples and SDK",
+      "names": [
+        "Node.js",
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "type": "Public Forum",
+      "names": [
+        "General Discussion",
+        "Feature Requests"
+      ]
+    },
+    {
+      "type": "Support Forum",
+      "names": [
+        "General Support",
+        "Technical Support"
+      ]
+    },
+    {
+      "type": "Other",
+      "names": [
+        "Terms of Service",
+        "Privacy Policy"
+      ]
+    }  
+  ]
 }

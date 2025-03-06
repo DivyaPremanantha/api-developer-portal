@@ -3,6 +3,7 @@
         "apiHandle": "AccommodationAPI",
         "apiInfo": {
             "apiName": "AccommodationAPI",
+            "apiHandle": "AccommodationAPI",
             "apiCategory": "Travel",
             "tags": [
                 "leisure",
@@ -29,6 +30,7 @@
         "apiHandle": "CountriesAPI",
         "apiInfo": {
             "apiName": "CountriesAPI",
+            "apiHandle": "CountriesAPI",
             "orgName": "GlobalData",
             "apiCategory": "Geography",
             "tags": [
